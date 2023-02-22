@@ -137,10 +137,9 @@ if __name__ == '__main__':
     server_id, photos, image_hash = upload_image_to_server(
         image_upload_address, file_path)
 
-    owner_id, media_id = save_image_to_vk(vk_url, access_token, api_version, group_id,
-                                server_id, photos, image_hash)
+    owner_id, media_id = save_image_to_vk(vk_url, access_token, api_version,
+                                          group_id, server_id, photos,
+                                          image_hash)
 
-    res = post_comic_in_group(vk_url, access_token, api_version, group_id,
-                              image_comment, owner_id, media_id)
-
-    print(res)
+    post_comic_in_group(vk_url, access_token, api_version, group_id,
+                        image_comment, owner_id, media_id)
